@@ -1,0 +1,42 @@
+{
+  "name": "ats-recruitment-system",
+  "version": "1.0.0",
+  "description": "ATS Recruitment System",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "client": "vite",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"vite\" \"node server.js\"",
+    "build": "vite build",
+    "start": "node server.js",
+    "postinstall": "npm run build",
+    "seed": "node backend/utils/seedBranches.js",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.16.1",
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^1.41.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.2",
+    "multer": "^2.1.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^8.0.7",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.15.1",
+    "recharts": "^3.8.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.14",
+    "vite": "^8.0.13"
+  }
+}
